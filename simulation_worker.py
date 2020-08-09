@@ -1,6 +1,11 @@
+import random
+import time
+
 class SimulationWorker:
     @staticmethod
     def start_simulation(simulation_parameters):
-        print("running simulation")
+        print("running simulation: " + simulation_parameters)
+
+        time.sleep(random.randint(3, 6));
 
         print("simulation completed")
