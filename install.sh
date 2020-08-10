@@ -19,4 +19,4 @@ if pgrep simulation_manager_main; then kill -9 `ps -eaf | grep simulation_manage
 echo "ENVIRONMENT=${ENVIRONMENT}"
 
 # start python process
-python3 simulation_manager_main.py > log.txt 2> /dev/null < /dev/null &
+nohup  python3 -u simulation_manager_main.py > log.txt 2>&1 &
