@@ -6,4 +6,4 @@ files:
     destination: /tmp/SimulationEngine
 hooks:
   AfterInstall:
-    - location: install.sh
+    - location: /tmp/SimulationEngine/install.sh
