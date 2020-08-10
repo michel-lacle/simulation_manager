@@ -1,7 +1,7 @@
-from abc import ABC
 from queue_reader import QueueReader
 import boto3
 import os
+from simulation_worker import SimulationWorker
 
 
 class AwsQueueReader(QueueReader):
@@ -21,5 +21,6 @@ class AwsQueueReader(QueueReader):
             for message in queue.receive_messages(MaxNumberOfMessages=1):
 
                 print('Incomming Message, {0}!'.format(message.body))
+                SimulationWorker.start_simulation(message.body)
 
                 message.delete()
