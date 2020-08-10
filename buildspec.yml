@@ -1,0 +1,15 @@
+#
+# This build file is used by AWS CodeBuild to run our build, produce a snap and make it available to downstream
+# CodePipeline stages.
+#
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "nothing todo here"
+artifacts:
+  files:
+    - '*.py'
+    - 'appspec.yml'
+    - 'install.sh'

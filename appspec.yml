@@ -1,0 +1,9 @@
+# describe how we deploy our app
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tmp/SimulationEngine
+hooks:
+  AfterInstall:
+    - location: install.sh
