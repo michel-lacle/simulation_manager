@@ -6,6 +6,8 @@ cd /home/ubuntu
 sudo apt-get update
 sudo apt-get install ruby -y
 sudo apt-get install wget -y
+sudo apt install python -y
+sudo apt-get install python3-pip -y
 
 # install apache
 sudo apt-get install apache2 -y
@@ -20,7 +22,7 @@ sudo service codedeploy-agent start
 
 
 # install aws logs
-sudo apt install python -y
+
 wget https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py
 wget https://s3.amazonaws.com/aws-codedeploy-us-east-1/cloudwatch/codedeploy_logs.conf
 chmod +x ./awslogs-agent-setup.py
@@ -28,4 +30,6 @@ sudo python awslogs-agent-setup.py -n -r us-east-1 -c s3://aws-codedeploy-us-eas
 sudo mkdir -p /var/awslogs/etc/config
 sudo cp codedeploy_logs.conf /var/awslogs/etc/config/
 sudo service awslogs restart
+
+
 

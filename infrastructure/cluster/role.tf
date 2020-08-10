@@ -58,6 +58,19 @@ data "aws_iam_policy_document" "this" {
       "arn:aws:s3:::*"
     ]
   }
+
+  // allows access to sqs
+  statement {
+    actions = [
+      "*"
+    ]
+
+    effect = "Allow"
+
+    resources = [
+      "arn:aws:sqs:::*"
+    ]
+  }
 }
 
 resource "aws_iam_role_policy" "this" {
