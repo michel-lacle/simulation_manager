@@ -2,11 +2,14 @@
 
 echo "running SimulationManager install"
 
+rm -fr /tmp/SimulationEngineInstall
+
+cp -r /tmp/SimulationEngine /tmp/SimulationEngineInstall
 
 ENVIRONMENT=dev
 export ENVIRONMENT
 
-cd /tmp/SimulationEngine
+cd /tmp/SimulationEngineInstall
 
 pip3 install -r requirements.txt
 
