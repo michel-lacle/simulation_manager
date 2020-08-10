@@ -5,7 +5,7 @@ module "simulation_cluster" {
   name = var.application_name
   instance_type = "t2.micro" # 1 vCpu
   ami_id = "ami-0ac80df6eff0e70b5"
-  size = 5
+  size = 1
 
   # networking
   subnet_id = "subnet-02c253f85df6a198a" # public 1

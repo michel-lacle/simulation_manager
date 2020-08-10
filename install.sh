@@ -1,17 +1,16 @@
 #!/bin/bash
 
-echo "running SimulatorEngine install"
+echo "running SimulationManager install"
 
-exit 0
+ENVIRONMENT=dev
+export ENVIRONMENT
 
 cd /tmp/SimulationEngine
 
-cp config.Qa.json config.json
-
-pip3 install -r requirements.Qa.txt
+pip3 install -r requirements.txt
 
 # kill running python process
-kill -9 `ps -eaf | grep simulation_engine_manager | awk '{print $2}'`
+kill -9 `ps -eaf | grep simulation_manager_main | awk '{print $2}'`
 
 # start python process
-python3 simulation_engine_manager.py > /dev/null 2> /dev/null < /dev/null &
+python3 simulation_manager_main.py > /dev/null 2> /dev/null < /dev/null &

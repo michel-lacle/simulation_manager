@@ -1,5 +1,6 @@
 import threading
 from inprocess_queue_reader_writer import InProcessReaderWriter
+from aws_sqs_reader import AwsQueueReader
 
 
 def start_simulation():
@@ -21,5 +22,14 @@ def start_simulation():
     print('All work completed')
 
 
+def start_aws_queue_reader():
+
+    aws_reader = AwsQueueReader()
+
+    aws_reader.read_queue_messages()
+
+
 if __name__ == '__main__':
-    start_simulation()
+    #start_simulation()
+
+    start_aws_queue_reader()

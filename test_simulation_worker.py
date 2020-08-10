@@ -1,6 +1,6 @@
 import unittest
 import simulation_worker
-import main
+import simulation_manager_main
 
 
 class TestSimulationWorker(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestSimulationWorker(unittest.TestCase):
         self.assertEqual('foo'.upper(), 'FOO')
 
     def test_run_main(self):
-        main.start_simulation()
+        simulation_manager_main.start_simulation()
 
 
 if __name__ == '__main__':
