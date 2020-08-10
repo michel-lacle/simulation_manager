@@ -62,13 +62,13 @@ data "aws_iam_policy_document" "this" {
   // allows access to sqs
   statement {
     actions = [
-      "*"
+      "sqs:*"
     ]
 
     effect = "Allow"
 
     resources = [
-      "arn:aws:sqs:::*"
+      "*"
     ]
   }
 }
