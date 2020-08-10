@@ -2,6 +2,7 @@
 
 echo "running SimulationManager install"
 
+
 ENVIRONMENT=dev
 export ENVIRONMENT
 
