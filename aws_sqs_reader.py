@@ -13,7 +13,7 @@ class AwsQueueReader(QueueReader):
         else:
             os.environ["AWS_PROFILE"] = "terraform-pr-private"
 
-        sqs = boto3.resource('sqs')
+        sqs = boto3.resource('sqs', region_name="us-east-1")
 
         queue = sqs.get_queue_by_name(QueueName='simulation_manager.fifo')
 
