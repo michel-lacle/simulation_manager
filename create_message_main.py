@@ -8,7 +8,7 @@ sqs = boto3.resource('sqs', region_name="us-east-1")
 # Get the queue
 queue = sqs.get_queue_by_name(QueueName='simulation_manager.fifo')
 
-for x in range(10):
+for x in range(1000):
     print(x)
 
     simulation_id = str(x)
